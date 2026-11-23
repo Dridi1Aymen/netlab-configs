@@ -24,7 +24,7 @@ def run_crud_demo():
     print("\n=== 2. CRÉATION D'UNE ADRESSE IP (POST /ip/address) ===")
     target_ip = "192.168.20.1/24"
     payload = {"address": target_ip, "interface": "ether2"}
-    resp = requests.post(f"{BASE_URL}/ip/address", json=payload, auth=AUTH, verify=False, timeout=5)
+    resp = requests.put(f"{BASE_URL}/ip/address", json=payload, auth=AUTH, verify=False, timeout=5)
     resp.raise_for_status()
     print("Réponse création :", resp.json())
 

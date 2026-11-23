@@ -39,7 +39,7 @@ def ensure_static_routes(routes: list[dict]):
         if pair in existing_pairs:
             print(f"[OK - EXISTE DÉJÀ] Route {route['dst-address']} via {route['gateway']} ignorée.")
         else:
-            resp = requests.post(
+            resp = requests.put(
                 f"{BASE_URL}/ip/route",
                 json=route,
                 auth=AUTH,
