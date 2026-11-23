@@ -1,2 +1,2 @@
-/ip address add address=192.168.20.1/24 interface=ether1
-/ip route add gateway=192.168.20.254
+/ip address add address=10.10.10.1/24 interface=ether1
+/ip route add gateway=10.10.10.254
